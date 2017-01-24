@@ -137,8 +137,8 @@ module OmniAuth
       def verify_access_token!(access_token)
         token_info = access_token.get('/debug_token', :params => { :input_token => access_token.token, :access_token => app_access_token })
         # verify all needed scopes are allowed
-        missing_scopes = authorize_params.scope.split(',').collect(&:strip) - token_info.parsed.fetch("data", {}).fetch("scopes", [])
-        raise "missing scopes #{missing_scopes.join(', ')}" if missing_scopes.any?
+        #missing_scopes = authorize_params.scope.split(',').collect(&:strip) - token_info.parsed.fetch("data", {}).fetch("scopes", [])
+        #raise "missing scopes #{missing_scopes.join(', ')}" if missing_scopes.any?
       end
 
       def signed_request_from_cookie
