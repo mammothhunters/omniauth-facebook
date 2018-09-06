@@ -1,5 +1,7 @@
 # OmniAuth Facebook &nbsp;[![Build Status](https://secure.travis-ci.org/mkdynamic/omniauth-facebook.svg?branch=master)](https://travis-ci.org/mkdynamic/omniauth-facebook) [![Gem Version](https://img.shields.io/gem/v/omniauth-facebook.svg)](https://rubygems.org/gems/omniauth-facebook)
 
+📣 **NOTICE** We’re looking for maintainers to help keep this project up-to-date. If you are interested in helping please open an Issue expressing your interest. Thanks! 📣
+
 **These notes are based on master, please see tags for README pertaining to specific releases.**
 
 Facebook OAuth2 Strategy for OmniAuth.
@@ -56,7 +58,7 @@ end
 
 ### API Version
 
-OmniAuth Facebook uses versioned API endpoints by default (current v2.6). You can configure a different version via `client_options` hash passed to `provider`, specifically you should change the version in the `site` and `authorize_url` parameters. For example, to change to v3.0 (assuming that exists):
+OmniAuth Facebook uses versioned API endpoints by default (current v2.10). You can configure a different version via `client_options` hash passed to `provider`, specifically you should change the version in the `site` and `authorize_url` parameters. For example, to change to v3.0 (assuming that exists):
 
 ```ruby
 use OmniAuth::Builder do
@@ -150,9 +152,7 @@ If you use the server-side flow, Facebook will give you back a longer lived acce
 
 ## Supported Rubies
 
-- Ruby MRI (1.9.3+)
-- JRuby (1.9 mode)
-- RBX (2.1.1+)
+- Ruby MRI (2.0+)
 
 ## License
 
